@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 import { albums } from "@/data/albums";
 import { artists } from "@/data/artists";
+import { getSiteUrl } from "@/lib/site-url";
 
-const BASE = "https://kyshiblue.world";
+const BASE = getSiteUrl();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

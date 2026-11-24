@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/layout/Footer";
+import { getSiteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default: "KYSHIBLUE — Code. Music. Culture. Life.",
     template: "%s — KYSHIBLUE",
